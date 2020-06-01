@@ -51,7 +51,7 @@ def productinfo():
                   'price': price,
                   'review_count': review_count,
                   'availability': availability}
-    return render_template('products.html', title='Product Info', productinfo=json.dumps(jsonObject, indent=2))
+    return render_template('productinfo.html', title='Product Info', productinfo=json.dumps(jsonObject, indent=2))
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
