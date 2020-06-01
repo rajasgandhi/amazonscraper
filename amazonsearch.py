@@ -13,7 +13,7 @@ def main():
     return render_template('index.html', title='Home')
 
 @app.route("/productinfo", methods=['POST'])
-def search():
+def productinfo():
     PRODUCT_URL = request.form['url']
     HEADERS = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36',}
     response = requests.post(PRODUCT_URL, headers=HEADERS)
