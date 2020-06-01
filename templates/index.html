@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Enter product url to see product info</h1>
+        <form name="loginform" action="{{ url_for('productinfo') }}" method="post">
+          <label for="producturl" >Enter Product Url: </label><input name="producturl" type="text" required>
+          <br><br><br><br>
+          <input id="submit-button" type="submit" value="Search">
+        </form>
+    </body>
+</html>
