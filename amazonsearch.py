@@ -12,9 +12,9 @@ app=Flask(__name__)
 def main():
     return render_template('index.html', title='Home')
 
-@app.route("/productinfo", methods=['POST'])
+@app.route("/productinfo", methods=["POST"])
 def productinfo():
-    PRODUCT_URL = request.form['url']
+    PRODUCT_URL = request.form["producturl"]
     HEADERS = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36',}
     response = requests.post(PRODUCT_URL, headers=HEADERS)
     response.raise_for_status()
